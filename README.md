@@ -11,7 +11,7 @@
 
 ## 🌐 Live Demo
 
-👉 **[View Live Site](https://YOUR-USERNAME.github.io/novatech-labs)**
+👉 **[View Live Site](https://akshay42github.github.io/novatech-labs)**
 > *(Replace with your actual GitHub Pages URL after deployment)*
 
 ---
