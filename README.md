@@ -12,7 +12,6 @@
 ## 🌐 Live Demo
 
 👉 **[View Live Site](https://akshay42github.github.io/PRODIGY_WD_01/)**
-> *(Replace with your actual GitHub Pages URL after deployment)*
 
 ---
 
