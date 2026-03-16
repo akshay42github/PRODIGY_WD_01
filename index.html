@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaTech Labs — Building the Future with AI</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       CURSOR GLOW
+  ═══════════════════════════════════════════ -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <polygon points="14,2 26,9 26,19 14,26 2,19 2,9" fill="none" stroke="#00f2ff" stroke-width="1.5"/>
+            <polygon points="14,7 21,11 21,17 14,21 7,17 7,11" fill="none" stroke="#00f2ff" stroke-width="1" opacity="0.5"/>
+            <circle cx="14" cy="14" r="2.5" fill="#00f2ff"/>
+          </svg>
+        </span>
+        Nova<span class="logo-accent">Tech</span> Labs
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#contact" class="nav-cta">Get Started</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu overlay -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- ═══════════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+
+    <div class="hero-grid-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        AI Research & Development Lab
+      </div>
+
+      <h1 class="hero-heading">
+        Building the<br />
+        <span class="gradient-text">Future</span> with AI
+      </h1>
+
+      <p class="hero-sub">
+        NovaTech Labs develops intelligent solutions for tomorrow's world —<br class="br-desktop" />
+        where machine learning meets human ambition.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#services" class="btn-primary">
+          Explore Services
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#about" class="btn-ghost">
+          <span class="play-ring">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M4 2.5L11 7L4 11.5V2.5Z" fill="currentColor"/>
+            </svg>
+          </span>
+          Watch Overview
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" data-target="200">0</span><span>+</span>
+          <p>AI Models Deployed</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="98">0</span><span>%</span>
+          <p>Client Satisfaction</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="50">0</span><span>M+</span>
+          <p>Data Points Processed</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       ABOUT SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Left: Visual -->
+        <div class="about-visual" data-reveal>
+          <div class="about-img-wrap">
+            <div class="about-img-frame">
+              <div class="frame-corner tl"></div>
+              <div class="frame-corner tr"></div>
+              <div class="frame-corner bl"></div>
+              <div class="frame-corner br"></div>
+              <!-- Abstract AI brain illustration using SVG -->
+              <div class="about-illustration">
+                <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stop-color="#0a1628"/>
+                      <stop offset="100%" stop-color="#050d1a"/>
+                    </radialGradient>
+                    <radialGradient id="brainGrad" cx="50%" cy="45%" r="40%">
+                      <stop offset="0%" stop-color="#00f2ff" stop-opacity="0.2"/>
+                      <stop offset="100%" stop-color="#0077ff" stop-opacity="0"/>
+                    </radialGradient>
+                  </defs>
+                  <rect width="400" height="400" fill="url(#bgGrad)"/>
+                  <rect width="400" height="400" fill="url(#brainGrad)"/>
+
+                  <!-- Neural network nodes -->
+                  <g class="svg-nodes">
+                    <circle cx="200" cy="200" r="18" fill="#00f2ff" opacity="0.15"/>
+                    <circle cx="200" cy="200" r="8" fill="#00f2ff" opacity="0.9"/>
+
+                    <!-- Ring 1 -->
+                    <circle cx="200" cy="140" r="6" fill="#00f2ff" opacity="0.7"/>
+                    <circle cx="252" cy="168" r="6" fill="#0077ff" opacity="0.7"/>
+                    <circle cx="252" cy="232" r="6" fill="#00f2ff" opacity="0.7"/>
+                    <circle cx="200" cy="260" r="6" fill="#0077ff" opacity="0.7"/>
+                    <circle cx="148" cy="232" r="6" fill="#00f2ff" opacity="0.7"/>
+                    <circle cx="148" cy="168" r="6" fill="#0077ff" opacity="0.7"/>
+
+                    <!-- Ring 2 -->
+                    <circle cx="200" cy="88" r="4" fill="#00f2ff" opacity="0.5"/>
+                    <circle cx="268" cy="114" r="4" fill="#0077ff" opacity="0.5"/>
+                    <circle cx="296" cy="186" r="4" fill="#00f2ff" opacity="0.5"/>
+                    <circle cx="280" cy="264" r="4" fill="#0077ff" opacity="0.5"/>
+                    <circle cx="224" cy="312" r="4" fill="#00f2ff" opacity="0.5"/>
+                    <circle cx="176" cy="312" r="4" fill="#0077ff" opacity="0.5"/>
+                    <circle cx="120" cy="264" r="4" fill="#00f2ff" opacity="0.5"/>
+                    <circle cx="104" cy="186" r="4" fill="#0077ff" opacity="0.5"/>
+                    <circle cx="132" cy="114" r="4" fill="#00f2ff" opacity="0.5"/>
+
+                    <!-- Connections ring1 center -->
+                    <line x1="200" y1="200" x2="200" y2="140" stroke="#00f2ff" stroke-width="0.8" opacity="0.4"/>
+                    <line x1="200" y1="200" x2="252" y2="168" stroke="#00f2ff" stroke-width="0.8" opacity="0.4"/>
+                    <line x1="200" y1="200" x2="252" y2="232" stroke="#00f2ff" stroke-width="0.8" opacity="0.4"/>
+                    <line x1="200" y1="200" x2="200" y2="260" stroke="#00f2ff" stroke-width="0.8" opacity="0.4"/>
+                    <line x1="200" y1="200" x2="148" y2="232" stroke="#00f2ff" stroke-width="0.8" opacity="0.4"/>
+                    <line x1="200" y1="200" x2="148" y2="168" stroke="#00f2ff" stroke-width="0.8" opacity="0.4"/>
+
+                    <!-- Ring1 connections -->
+                    <line x1="200" y1="140" x2="252" y2="168" stroke="#0077ff" stroke-width="0.5" opacity="0.3"/>
+                    <line x1="252" y1="168" x2="252" y2="232" stroke="#0077ff" stroke-width="0.5" opacity="0.3"/>
+                    <line x1="252" y1="232" x2="200" y2="260" stroke="#0077ff" stroke-width="0.5" opacity="0.3"/>
+                    <line x1="200" y1="260" x2="148" y2="232" stroke="#0077ff" stroke-width="0.5" opacity="0.3"/>
+                    <line x1="148" y1="232" x2="148" y2="168" stroke="#0077ff" stroke-width="0.5" opacity="0.3"/>
+                    <line x1="148" y1="168" x2="200" y2="140" stroke="#0077ff" stroke-width="0.5" opacity="0.3"/>
+
+                    <!-- Ring2 connections to ring1 -->
+                    <line x1="200" y1="140" x2="200" y2="88" stroke="#00f2ff" stroke-width="0.4" opacity="0.2"/>
+                    <line x1="200" y1="140" x2="268" y2="114" stroke="#00f2ff" stroke-width="0.4" opacity="0.2"/>
+                    <line x1="252" y1="168" x2="268" y2="114" stroke="#00f2ff" stroke-width="0.4" opacity="0.2"/>
+                    <line x1="252" y1="168" x2="296" y2="186" stroke="#00f2ff" stroke-width="0.4" opacity="0.2"/>
+                    <line x1="252" y1="232" x2="296" y2="186" stroke="#00f2ff" stroke-width="0.4" opacity="0.2"/>
+                    <line x1="252" y1="232" x2="280" y2="264" stroke="#00f2ff" stroke-width="0.4" opacity="0.2"/>
+                    <line x1="200" y1="260" x2="280" y2="264" stroke="#00f2ff" stroke-width="0.4" opacity="0.2"/>
+                    <line x1="200" y1="260" x2="224" y2="312" stroke="#00f2ff" stroke-width="0.4" opacity="0.2"/>
+                    <line x1="200" y1="260" x2="176" y2="312" stroke="#00f2ff" stroke-width="0.4" opacity="0.2"/>
+                    <line x1="148" y1="232" x2="120" y2="264" stroke="#00f2ff" stroke-width="0.4" opacity="0.2"/>
+                    <line x1="148" y1="168" x2="104" y2="186" stroke="#00f2ff" stroke-width="0.4" opacity="0.2"/>
+                    <line x1="148" y1="168" x2="132" y2="114" stroke="#00f2ff" stroke-width="0.4" opacity="0.2"/>
+                    <line x1="200" y1="140" x2="132" y2="114" stroke="#00f2ff" stroke-width="0.4" opacity="0.2"/>
+                  </g>
+
+                  <!-- Animated pulse rings -->
+                  <circle cx="200" cy="200" r="50" fill="none" stroke="#00f2ff" stroke-width="0.5" opacity="0.15" class="pulse-ring"/>
+                  <circle cx="200" cy="200" r="80" fill="none" stroke="#0077ff" stroke-width="0.5" opacity="0.1" class="pulse-ring-2"/>
+                  <circle cx="200" cy="200" r="110" fill="none" stroke="#00f2ff" stroke-width="0.5" opacity="0.07" class="pulse-ring-3"/>
+
+                  <!-- Floating data points -->
+                  <rect x="55" y="80" width="60" height="28" rx="4" fill="#0d1e3a" stroke="#00f2ff" stroke-width="0.5" opacity="0.8"/>
+                  <text x="85" y="99" text-anchor="middle" fill="#00f2ff" font-size="9" font-family="monospace">MODEL v4.2</text>
+
+                  <rect x="285" y="290" width="64" height="28" rx="4" fill="#0d1e3a" stroke="#0077ff" stroke-width="0.5" opacity="0.8"/>
+                  <text x="317" y="309" text-anchor="middle" fill="#0077ff" font-size="9" font-family="monospace">99.8% ACC</text>
+
+                  <rect x="20" y="260" width="72" height="28" rx="4" fill="#0d1e3a" stroke="#00f2ff" stroke-width="0.5" opacity="0.8"/>
+                  <text x="56" y="279" text-anchor="middle" fill="#00f2ff" font-size="9" font-family="monospace">NEURAL NET</text>
+
+                  <rect x="290" y="80" width="64" height="28" rx="4" fill="#0d1e3a" stroke="#0077ff" stroke-width="0.5" opacity="0.8"/>
+                  <text x="322" y="99" text-anchor="middle" fill="#0077ff" font-size="9" font-family="monospace">AI ACTIVE</text>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Floating accent cards -->
+            <div class="float-card fc-1">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M10 2L18 6V14L10 18L2 14V6L10 2Z" stroke="#00f2ff" stroke-width="1.2" fill="none"/>
+                <circle cx="10" cy="10" r="2" fill="#00f2ff"/>
+              </svg>
+              <div>
+                <strong>Est. 2018</strong>
+                <span>San Francisco, CA</span>
+              </div>
+            </div>
+
+            <div class="float-card fc-2">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="8" stroke="#0077ff" stroke-width="1.2"/>
+                <path d="M6 10l3 3 5-5" stroke="#0077ff" stroke-width="1.2" stroke-linecap="round"/>
+              </svg>
+              <div>
+                <strong>ISO Certified</strong>
+                <span>AI Security</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Text -->
+        <div class="about-text" data-reveal>
+          <div class="section-label">Who We Are</div>
+          <h2 class="section-heading">
+            We Don't Just Build AI —<br />
+            <span class="gradient-text">We Shape Its Future</span>
+          </h2>
+          <p class="about-desc">
+            NovaTech Labs is a frontier AI research and engineering studio dedicated to creating intelligent systems that amplify human potential. Founded by a team of MIT researchers and Silicon Valley engineers, we operate at the intersection of theory and impact.
+          </p>
+          <p class="about-desc">
+            From breakthrough natural language models to enterprise-grade automation pipelines, our work reaches millions of people daily — quietly transforming how industries operate.
+          </p>
+
+          <div class="about-pillars">
+            <div class="pillar">
+              <div class="pillar-icon">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M11 2L20 7V15L11 20L2 15V7L11 2Z" stroke="#00f2ff" stroke-width="1.3" fill="none"/>
+                  <circle cx="11" cy="11" r="3" fill="#00f2ff" opacity="0.6"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Research-First Culture</h4>
+                <p>We publish, peer-review, and build on open science.</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <rect x="3" y="3" width="16" height="16" rx="3" stroke="#0077ff" stroke-width="1.3" fill="none"/>
+                  <path d="M7 11l3 3 5-5" stroke="#0077ff" stroke-width="1.3" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Ethical by Design</h4>
+                <p>Every model ships with bias audits and transparency reports.</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <circle cx="11" cy="11" r="9" stroke="#00f2ff" stroke-width="1.3" fill="none"/>
+                  <path d="M11 6v5l3 3" stroke="#00f2ff" stroke-width="1.3" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Speed at Scale</h4>
+                <p>From prototype to production in weeks, not years.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn-primary">Partner With Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SERVICES SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header center" data-reveal>
+        <div class="section-label">What We Do</div>
+        <h2 class="section-heading">Our Core <span class="gradient-text">Services</span></h2>
+        <p class="section-sub">End-to-end AI capabilities — from raw research to deployed production systems at scale.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card" data-reveal>
+          <div class="card-glow"></div>
+          <div class="service-icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <path d="M18 4L32 11V25L18 32L4 25V11L18 4Z" stroke="#00f2ff" stroke-width="1.5" fill="none"/>
+              <circle cx="18" cy="18" r="5" fill="#00f2ff" opacity="0.2"/>
+              <circle cx="18" cy="18" r="2" fill="#00f2ff"/>
+              <line x1="18" y1="13" x2="18" y2="11" stroke="#00f2ff" stroke-width="1"/>
+              <line x1="22" y1="15" x2="24" y2="14" stroke="#00f2ff" stroke-width="1"/>
+              <line x1="22" y1="21" x2="24" y2="22" stroke="#00f2ff" stroke-width="1"/>
+              <line x1="18" y1="23" x2="18" y2="25" stroke="#00f2ff" stroke-width="1"/>
+              <line x1="14" y1="21" x2="12" y2="22" stroke="#00f2ff" stroke-width="1"/>
+              <line x1="14" y1="15" x2="12" y2="14" stroke="#00f2ff" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="service-number">01</div>
+          <h3>AI Development</h3>
+          <p>Custom large language models, computer vision systems, and reinforcement learning agents built for your exact domain — not generic off-the-shelf solutions.</p>
+          <ul class="service-features">
+            <li>Custom LLM fine-tuning</li>
+            <li>Computer vision pipelines</li>
+            <li>Multi-modal AI systems</li>
+          </ul>
+          <a href="#contact" class="card-link">
+            Start a Project
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="service-card featured" data-reveal>
+          <div class="card-glow"></div>
+          <div class="featured-badge">Most Popular</div>
+          <div class="service-icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <rect x="4" y="4" width="28" height="28" rx="6" stroke="#0077ff" stroke-width="1.5" fill="none"/>
+              <path d="M12 18h12M18 12v12" stroke="#0077ff" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="12" cy="12" r="2.5" fill="#0077ff" opacity="0.6"/>
+              <circle cx="24" cy="24" r="2.5" fill="#0077ff" opacity="0.6"/>
+              <circle cx="24" cy="12" r="2.5" fill="#0077ff" opacity="0.6"/>
+              <circle cx="12" cy="24" r="2.5" fill="#0077ff" opacity="0.6"/>
+            </svg>
+          </div>
+          <div class="service-number">02</div>
+          <h3>Cloud Solutions</h3>
+          <p>Elastic, fault-tolerant AI infrastructure on any cloud provider. We architect systems that scale from zero to millions of requests without breaking a sweat.</p>
+          <ul class="service-features">
+            <li>MLOps & CI/CD pipelines</li>
+            <li>Distributed model serving</li>
+            <li>Cost-optimized scaling</li>
+          </ul>
+          <a href="#contact" class="card-link">
+            Start a Project
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="service-card" data-reveal>
+          <div class="card-glow"></div>
+          <div class="service-icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <rect x="6" y="14" width="8" height="8" rx="2" stroke="#00f2ff" stroke-width="1.3" fill="none"/>
+              <rect x="22" y="14" width="8" height="8" rx="2" stroke="#00f2ff" stroke-width="1.3" fill="none"/>
+              <rect x="14" y="6" width="8" height="8" rx="2" stroke="#0077ff" stroke-width="1.3" fill="none"/>
+              <rect x="14" y="22" width="8" height="8" rx="2" stroke="#0077ff" stroke-width="1.3" fill="none"/>
+              <line x1="14" y1="18" x2="14" y2="18" stroke="#00f2ff" stroke-width="1.3"/>
+              <path d="M14 18H22M18 14v4M18 18v4" stroke="#00f2ff" stroke-width="1" opacity="0.6"/>
+            </svg>
+          </div>
+          <div class="service-number">03</div>
+          <h3>Automation Systems</h3>
+          <p>Intelligent workflow automation that doesn't just follow rules — it learns them. Replace repetitive processes with self-improving agentic systems.</p>
+          <ul class="service-features">
+            <li>Agentic AI workflows</li>
+            <li>Document intelligence</li>
+            <li>Predictive automation</li>
+          </ul>
+          <a href="#contact" class="card-link">
+            Start a Project
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PORTFOLIO SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="section-header center" data-reveal>
+        <div class="section-label">Our Work</div>
+        <h2 class="section-heading">Selected <span class="gradient-text">Portfolio</span></h2>
+        <p class="section-sub">A look at some of the systems we've shipped — each one a story of a hard problem solved.</p>
+      </div>
+
+      <div class="portfolio-grid">
+
+        <div class="portfolio-item large" data-reveal>
+          <div class="portfolio-bg" style="background: linear-gradient(135deg, #0a1628 0%, #0d2240 50%, #0a2a3a 100%);">
+            <div class="portfolio-pattern">
+              <svg viewBox="0 0 400 300" fill="none" preserveAspectRatio="xMidYMid slice">
+                <circle cx="200" cy="150" r="80" stroke="#00f2ff" stroke-width="0.5" opacity="0.3"/>
+                <circle cx="200" cy="150" r="120" stroke="#0077ff" stroke-width="0.5" opacity="0.2"/>
+                <circle cx="200" cy="150" r="160" stroke="#00f2ff" stroke-width="0.5" opacity="0.1"/>
+                <line x1="80" y1="50" x2="200" y2="150" stroke="#00f2ff" stroke-width="0.4" opacity="0.3"/>
+                <line x1="320" y1="50" x2="200" y2="150" stroke="#00f2ff" stroke-width="0.4" opacity="0.3"/>
+                <line x1="80" y1="250" x2="200" y2="150" stroke="#0077ff" stroke-width="0.4" opacity="0.3"/>
+                <line x1="320" y1="250" x2="200" y2="150" stroke="#0077ff" stroke-width="0.4" opacity="0.3"/>
+                <circle cx="80" cy="50" r="5" fill="#00f2ff" opacity="0.6"/>
+                <circle cx="320" cy="50" r="5" fill="#00f2ff" opacity="0.6"/>
+                <circle cx="80" cy="250" r="5" fill="#0077ff" opacity="0.6"/>
+                <circle cx="320" cy="250" r="5" fill="#0077ff" opacity="0.6"/>
+                <circle cx="200" cy="150" r="8" fill="#00f2ff" opacity="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <div class="portfolio-overlay">
+            <div class="portfolio-tag">Natural Language Processing</div>
+            <h3>SentimentAI Platform</h3>
+            <p>Real-time sentiment analysis engine processing 12M+ social signals daily for a Fortune 100 retail brand.</p>
+            <a href="#contact" class="portfolio-link">View Case Study →</a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-reveal>
+          <div class="portfolio-bg" style="background: linear-gradient(135deg, #0d1a2e 0%, #1a0d2e 100%);">
+            <div class="portfolio-pattern">
+              <svg viewBox="0 0 300 200" fill="none" preserveAspectRatio="xMidYMid slice">
+                <rect x="20" y="20" width="260" height="160" rx="8" stroke="#a855f7" stroke-width="0.5" opacity="0.3"/>
+                <path d="M20 80Q90 40 150 80Q210 120 280 80" stroke="#a855f7" stroke-width="1" opacity="0.5" fill="none"/>
+                <path d="M20 100Q90 60 150 100Q210 140 280 100" stroke="#0077ff" stroke-width="1" opacity="0.5" fill="none"/>
+                <path d="M20 120Q90 80 150 120Q210 160 280 120" stroke="#00f2ff" stroke-width="1" opacity="0.3" fill="none"/>
+              </svg>
+            </div>
+          </div>
+          <div class="portfolio-overlay">
+            <div class="portfolio-tag">Predictive Analytics</div>
+            <h3>HealthPredict Engine</h3>
+            <p>Medical outcome prediction model with 94% accuracy, deployed across 40+ hospital networks.</p>
+            <a href="#contact" class="portfolio-link">View Case Study →</a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-reveal>
+          <div class="portfolio-bg" style="background: linear-gradient(135deg, #0a2010 0%, #0d2a1a 100%);">
+            <div class="portfolio-pattern">
+              <svg viewBox="0 0 300 200" fill="none" preserveAspectRatio="xMidYMid slice">
+                <g opacity="0.4">
+                  <rect x="30" y="60" width="30" height="100" rx="2" fill="#22c55e" opacity="0.6"/>
+                  <rect x="80" y="40" width="30" height="120" rx="2" fill="#22c55e" opacity="0.5"/>
+                  <rect x="130" y="70" width="30" height="90" rx="2" fill="#00f2ff" opacity="0.5"/>
+                  <rect x="180" y="30" width="30" height="130" rx="2" fill="#22c55e" opacity="0.6"/>
+                  <rect x="230" y="50" width="30" height="110" rx="2" fill="#00f2ff" opacity="0.5"/>
+                </g>
+                <path d="M30 100Q100 60 150 80Q200 100 270 50" stroke="#22c55e" stroke-width="1.5" fill="none" opacity="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <div class="portfolio-overlay">
+            <div class="portfolio-tag">Financial AI</div>
+            <h3>QuantEdge Trader</h3>
+            <p>Algorithmic trading system leveraging deep RL, achieving 3.2x better risk-adjusted returns.</p>
+            <a href="#contact" class="portfolio-link">View Case Study →</a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-reveal>
+          <div class="portfolio-bg" style="background: linear-gradient(135deg, #1a1000 0%, #2a1a00 100%);">
+            <div class="portfolio-pattern">
+              <svg viewBox="0 0 300 200" fill="none" preserveAspectRatio="xMidYMid slice">
+                <circle cx="150" cy="100" r="60" stroke="#f59e0b" stroke-width="0.5" opacity="0.3"/>
+                <circle cx="150" cy="100" r="40" stroke="#f59e0b" stroke-width="0.5" opacity="0.4"/>
+                <circle cx="150" cy="100" r="20" fill="#f59e0b" opacity="0.1"/>
+                <circle cx="150" cy="100" r="5" fill="#f59e0b" opacity="0.7"/>
+                <circle cx="90" cy="70" r="4" fill="#00f2ff" opacity="0.6"/>
+                <circle cx="210" cy="70" r="4" fill="#00f2ff" opacity="0.6"/>
+                <circle cx="90" cy="130" r="4" fill="#0077ff" opacity="0.6"/>
+                <circle cx="210" cy="130" r="4" fill="#0077ff" opacity="0.6"/>
+                <line x1="90" y1="70" x2="150" y2="100" stroke="#f59e0b" stroke-width="0.5" opacity="0.4"/>
+                <line x1="210" y1="70" x2="150" y2="100" stroke="#f59e0b" stroke-width="0.5" opacity="0.4"/>
+                <line x1="90" y1="130" x2="150" y2="100" stroke="#f59e0b" stroke-width="0.5" opacity="0.4"/>
+                <line x1="210" y1="130" x2="150" y2="100" stroke="#f59e0b" stroke-width="0.5" opacity="0.4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="portfolio-overlay">
+            <div class="portfolio-tag">Computer Vision</div>
+            <h3>VisionGuard Security</h3>
+            <p>Real-time anomaly detection for smart city infrastructure, monitoring 10,000+ cameras simultaneously.</p>
+            <a href="#contact" class="portfolio-link">View Case Study →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TESTIMONIAL STRIP
+  ═══════════════════════════════════════════ -->
+  <section class="testimonial-strip">
+    <div class="container">
+      <div class="testimonial-track" id="testimonialTrack">
+        <div class="testimonial-slide">
+          <p>"NovaTech's AI reduced our manual processing time by 78% in the first quarter alone."</p>
+          <cite>— Sarah Chen, CTO at FinovateX</cite>
+        </div>
+        <div class="testimonial-slide">
+          <p>"The most technically rigorous AI team we've ever worked with. Exceptional depth."</p>
+          <cite>— Marcus Webb, VP Engineering, HealthBridge</cite>
+        </div>
+        <div class="testimonial-slide">
+          <p>"From concept to deployment in 6 weeks. The model accuracy exceeded all our benchmarks."</p>
+          <cite>— Priya Nair, Director of AI, RetailCore</cite>
+        </div>
+      </div>
+      <div class="testimonial-dots" id="testimonialDots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Left: Info -->
+        <div class="contact-info" data-reveal>
+          <div class="section-label">Get In Touch</div>
+          <h2 class="section-heading">
+            Let's Build<br />
+            <span class="gradient-text">Something Real</span>
+          </h2>
+          <p class="contact-desc">
+            Have a project in mind? A problem AI might solve? Or just want to talk about the future? We respond to every message within 24 hours.
+          </p>
+
+          <div class="contact-channels">
+            <div class="channel">
+              <div class="channel-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M3 5h14v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" stroke="#00f2ff" stroke-width="1.2" fill="none"/>
+                  <path d="M3 5l7 7 7-7" stroke="#00f2ff" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <span>Email</span>
+                <a href="mailto:hello@novatechlabs.ai">hello@novatechlabs.ai</a>
+              </div>
+            </div>
+            <div class="channel">
+              <div class="channel-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <circle cx="10" cy="10" r="8" stroke="#0077ff" stroke-width="1.2" fill="none"/>
+                  <path d="M10 6v4l3 3" stroke="#0077ff" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <span>Office Hours</span>
+                <a href="#">Mon – Fri, 9 AM – 6 PM PST</a>
+              </div>
+            </div>
+            <div class="channel">
+              <div class="channel-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M10 2C7.2 2 5 4.2 5 7c0 4.2 5 11 5 11s5-6.8 5-11c0-2.8-2.2-5-5-5z" stroke="#00f2ff" stroke-width="1.2" fill="none"/>
+                  <circle cx="10" cy="7" r="1.5" fill="#00f2ff"/>
+                </svg>
+              </div>
+              <div>
+                <span>Location</span>
+                <a href="#">340 Pine St, San Francisco, CA 94104</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-btn" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-btn" aria-label="GitHub">GH</a>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="contact-form-wrap" data-reveal>
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name" />
+              <span class="form-error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email" />
+              <span class="form-error" id="emailError"></span>
+            </div>
+            <div class="form-group">
+              <label for="company">Company (Optional)</label>
+              <input type="text" id="company" name="company" placeholder="Your company name" autocomplete="organization" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+              <span class="form-error" id="messageError"></span>
+            </div>
+            <button type="submit" class="btn-primary form-submit" id="submitBtn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-spinner" style="display:none">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" class="spin">
+                  <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="2" stroke-dasharray="32" stroke-dashoffset="12" stroke-linecap="round"/>
+                </svg>
+              </span>
+            </button>
+            <div class="form-success" id="formSuccess" style="display:none">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="8" stroke="#00f2ff" stroke-width="1.5"/>
+                <path d="M6 10l3 3 5-5" stroke="#00f2ff" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              Message sent! We'll be in touch within 24 hours.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo">
+            <span class="logo-icon">
+              <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
+                <polygon points="14,2 26,9 26,19 14,26 2,19 2,9" fill="none" stroke="#00f2ff" stroke-width="1.5"/>
+                <circle cx="14" cy="14" r="2.5" fill="#00f2ff"/>
+              </svg>
+            </span>
+            Nova<span class="logo-accent">Tech</span> Labs
+          </a>
+          <p>Building intelligent systems<br />for a better tomorrow.</p>
+          <p class="footer-domain">www.novatechlabs.ai</p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#">AI Development</a></li>
+              <li><a href="#">Cloud Solutions</a></li>
+              <li><a href="#">Automation</a></li>
+              <li><a href="#">Consulting</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">Research Papers</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 NovaTech Labs Inc. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
